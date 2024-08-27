@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Секундомер зарплаты</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+<body>
+    <div id="content">
+        <h1>Счетчик вашей зарплаты</h1>
+        <article>
+            <p>Здесь вы можете наглядно увидеть, насколько быстро вы зарабатываете деньги</p>
+        </article>
+        <input id="salary" type="text" placeholder="Введите оклад в час">
+        
+        <p>Выберите валюту</p>
+        <input type="radio" id="rubles" name="currency" value="₽" checked>
+        <label for="rubles">&#8381;</label>
+        
+        <input type="radio" id="dollars" name="currency" value="$">
+        <label for="dollars">&dollar;</label>
+
+        <input type="radio" id="euro" name="currency" value="€">
+        <label for="euro">&euro;</label>
+
+        <button id="start_button" onclick="startCounting()">Запуск счетчика</button>
+        <button id="stop_button" onclick="stopCounting()">Остановить счетчик</button>
+        <p id="current_salary"></p>
+        <p id="money"></p>
+    </div>
+    <button id="themeToggle" onclick="setTheme()">Свет</button>
+</body>
+</html>
